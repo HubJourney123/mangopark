@@ -73,8 +73,8 @@ const MangoFestival = () => {
                 
                 <div className="border-l-4 border-orange-400 pl-4 md:pl-6 bg-orange-50 py-4 rounded-r-2xl">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed italic">
-                    "এই স্বীকৃতি শুধু একটি প্রতিষ্ঠানের নয় — এটা সেই প্রতিটি মানুষকে উৎসর্গ করা, 
-                    যারা আমাদের ওপর বিশ্বাস রেখে পাশে থেকেছেন।"
+                    এই স্বীকৃতি শুধু একটি প্রতিষ্ঠানের নয় — এটা সেই প্রতিটি মানুষকে উৎসর্গ করা, 
+                    যারা আমাদের ওপর বিশ্বাস রেখে পাশে থেকেছেন।
                   </p>
                 </div>
                 
