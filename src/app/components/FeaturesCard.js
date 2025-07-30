@@ -71,7 +71,7 @@ const FeaturesCard = () => {
               </div>
 
               {/* Background Card */}
-              <div className={`relative bg-gradient-to-br from-orange-50 to-yellow-50 rounded-3xl p-8 md:p-10 pt-12 shadow-lg transition-all duration-500 border border-orange-100 overflow-hidden
+              <div className={`relative bg-gradient-to-br from-orange-50 to-yellow-50 rounded-3xl p-10 md:p-10 pt-12 shadow-lg transition-all duration-500 border border-orange-100 overflow-hidden
                 ${activeCard === feature.id ? 'shadow-2xl bg-gradient-to-br from-orange-100 to-yellow-100' : 'hover:shadow-2xl hover:bg-gradient-to-br hover:from-orange-100 hover:to-yellow-100'}`}>
                 
                 {/* Background Gradient Overlay */}

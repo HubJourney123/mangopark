@@ -9,7 +9,9 @@ const MangoFestival = () => {
   const festivalImages = [
     { id: 1, src: '/activities/festival1.png', alt: 'ম্যাংগো ফেস্টিভাল ২০২৫ - আমাদের আমের স্টল', title: 'আমাদের আমের স্টল', description: 'বিভিন্ন জাতের আম নিয়ে সাজানো আমাদের স্টল' },
     { id: 2, src: '/activities/festival2.png', alt: 'জেলা প্রশাসক মহোদয়ের স্টল পরিদর্শন', title: 'জেলা প্রশাসকের পরিদর্শন', description: 'মাননীয় জেলা প্রশাসক আমাদের স্টল পরিদর্শন করছেন' },
-    { id: 3, src: '/activities/festival3.png', alt: 'ম্যাংগো পার্ক সম্মাননা ক্রেস্ট প্রদান', title: 'সম্মাননা ক্রেস্ট প্রাপ্তি', description: 'গর্বের সাথে সম্মাননা ক্রেস্ট গ্রহণের মুহূর্ত' }
+    { id: 3, src: '/activities/festival3.png', alt: 'ম্যাংগো পার্ক সম্মাননা ক্রেস্ট প্রদান', title: 'সম্মাননা ক্রেস্ট প্রাপ্তি', description: 'গর্বের সাথে সম্মাননা ক্রেস্ট গ্রহণের মুহূর্ত' },
+    { id: 4, src: '/activities/festival4.jpeg', alt: 'ম্যাংগো পার্ক সম্মাননা ক্রেস্ট প্রদান', title: 'স্টলে আনন্দ উদযাপন ', description: 'দলের সাথে আনন্দ উৎসব' }
+
   ];
 
   const nextImage = () => {
@@ -98,92 +100,84 @@ const MangoFestival = () => {
             </div>
           </div>
 
-          {/* Right Side - Image Gallery */}
+          {/* Right Side - Image Grid */}
           <div className="relative">
             <div className="bg-white rounded-3xl p-4 md:p-6 shadow-xl">
               
-              {/* Main Image Display */}
-              <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden rounded-2xl mb-4">
-                <Image
-                  src={festivalImages[activeImage].src}
-                  alt={festivalImages[activeImage].alt}
-                  fill
-                  className="object-cover transition-all duration-500"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                
-                {/* Navigation Arrows */}
-                <button
-                  onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white text-gray-800 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-110"
-                >
-                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white text-gray-800 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-110"
-                >
-                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                {/* Image Title and Description */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white p-4">
-                  <h3 className="text-lg md:text-xl font-bold mb-1">
-                    {festivalImages[activeImage].title}
-                  </h3>
-                  <p className="text-sm md:text-base opacity-90">
-                    {festivalImages[activeImage].description}
-                  </p>
-                </div>
-
-                {/* Award Badge */}
-                <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-2 md:px-4 md:py-2 rounded-full font-bold text-sm md:text-base shadow-lg">
-                  {activeImage === 0 ? '🥭 আমের স্টল' : activeImage === 1 ? '👨‍💼 DC পরিদর্শন' : '🏆 ক্রেস্ট প্রাপ্তি'}
-                </div>
-              </div>
-
-              {/* Thumbnail Navigation */}
-              <div className="flex justify-center space-x-2 md:space-x-4">
+              {/* Image Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {festivalImages.map((image, index) => (
-                  <button
+                  <div
                     key={image.id}
-                    onClick={() => setActiveImage(index)}
-                    className={`relative w-16 h-12 md:w-20 md:h-16 rounded-lg overflow-hidden transition-all duration-300 ${
-                      activeImage === index 
-                        ? 'ring-4 ring-orange-500 scale-110' 
-                        : 'opacity-70 hover:opacity-100 hover:scale-105'
-                    }`}
+                    className="group relative bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer"
                   >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover"
-                      sizes="80px"
-                    />
-                  </button>
+                    {/* Image */}
+                    <div className="relative h-48 md:h-48 overflow-hidden">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                      
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      
+                      {/* Badge */}
+                      <div className="absolute top-2 left-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        {index === 0 ? '🥭 স্টল' : index === 1 ? '👨‍💼 পরিদর্শন' : index === 2 ? '🏆 ক্রেস্ট' : '🎉 উদযাপন'}
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-3 md:p-4">
+                      <h3 className="font-bold text-gray-800 text-sm md:text-base mb-1 group-hover:text-orange-600 transition-colors duration-300">
+                        {image.title}
+                      </h3>
+                      <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                        {image.description}
+                      </p>
+                    </div>
+                  </div>
                 ))}
               </div>
 
-              {/* Image Counter & Current Image Info */}
-              <div className="text-center mt-4 space-y-2">
-                <span className="text-sm md:text-base text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
-                  {activeImage + 1} / {festivalImages.length}
-                </span>
-                <p className="text-xs md:text-sm text-gray-500 font-medium">
-                  {festivalImages[activeImage].title}
+              {/* Grid Title */}
+              <div className="text-center mt-4">
+                <p className="text-sm md:text-base text-gray-600 font-medium">
+                  ম্যাঙ্গো ফেস্টিভাল ২০২৫ এর স্মৃতিচিহ্ন
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        
+        {/* Bottom Achievement Section */}
+        <div className="mt-12 md:mt-16">
+          <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-3xl p-6 md:p-8 text-white text-center shadow-2xl">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex items-center space-x-2">
+                <span className="text-3xl md:text-4xl">🥭</span>
+                <span className="text-xl md:text-2xl font-bold">Mango Park</span>
+              </div>
+              
+              <div className="hidden md:block w-1 h-12 bg-white/30 rounded-full"></div>
+              
+              <div className="text-center">
+                <p className="text-lg md:text-xl font-semibold">ম্যাংগো ফেস্টিভাল ২০২৫</p>
+                <p className="text-base md:text-lg opacity-90">সম্মাননা প্রাপ্ত প্রতিষ্ঠান</p>
+              </div>
+              
+              <div className="hidden md:block w-1 h-12 bg-white/30 rounded-full"></div>
+              
+              <div className="flex items-center space-x-2">
+                <span className="text-3xl md:text-4xl">🏆</span>
+                <span className="text-xl md:text-2xl font-bold">২০২৫</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Floating Elements */}

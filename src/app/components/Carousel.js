@@ -9,6 +9,8 @@ const HeroCarousel = () => {
     { id: 2, image: "/carousel/2.png", alt: "Slide 2" },
     { id: 3, image: "/carousel/3.png", alt: "Slide 3" },
     { id: 4, image: "/carousel/4.png", alt: "Slide 4" },
+    { id: 5, image: "/carousel/5.png", alt: "Slide 5" },
+    { id: 6, image: "/carousel/6.png", alt: "Slide 6" },
     
   ];
 

@@ -10,6 +10,7 @@ import FeaturesCard from './components/FeaturesCard';
 import Footer from './components/Footer';
 import MangoFestival from './components/MangoFestival';
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
+import OrganicProduct from './components/OrganicProduct';
 
 
 
@@ -22,8 +23,10 @@ export default function Home() {
       <FeaturesCard/>
       <MangoCard/>
       <PickleCard/>
+      <OrganicProduct/>
       <MangoFestival/>
-      <FloatingWhatsAppButton/>
+      
+      
       <Footer/>
       
     </div>
