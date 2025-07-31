@@ -2,8 +2,5 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://mangoparkbd.com
-
 # Sitemaps
 Sitemap: https://mangoparkbd.com/sitemap.xml
