@@ -22,6 +22,9 @@ export const metadata = {
   creator: "Mango Park",
   publisher: "Mango Park",
   metadataBase: new URL("https://mangoparkbd.com"),
+  alternates: {
+    canonical: "https://mangoparkbd.com",
+  },
   openGraph: {
     title: "Mango Park - প্রাকৃতিক আম ও আচার | mangoparkbd.com",
     description: "mangoparkbd.com - ১১৭ বিঘা আমের বাগান থেকে সরাসরি সংগ্রহ করা সেরা মানের আম ও ঐতিহ্যবাহী আচার",
