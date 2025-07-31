@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const ReviewsPage = () => {
   const [selectedReview, setSelectedReview] = useState(null);
@@ -61,6 +63,7 @@ const ReviewsPage = () => {
         <title>Customer Reviews - Mango Park</title>
         <meta name="description" content="Positive reviews from our valuable customers about Mango Park's natural mangoes and pickles." />
       </Head>
+      <Navbar/>
 
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-orange-50 to-yellow-50">
         
@@ -259,6 +262,7 @@ const ReviewsPage = () => {
           </div>
         </div>
       )}
+        <Footer/>
     </>
   );
 };
