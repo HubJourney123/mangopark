@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mango Park - প্রাকৃতিক আম ও আচার",
+  title: "Mango Park - প্রাকৃতিক আম ও আচার | mangoparkbd.com | mangoparkbd | mangopark bd | mango park bd",
   description: "১১৭ বিঘা আমের বাগান থেকে সরাসরি সংগ্রহ করা সেরা মানের আম ও ঐতিহ্যবাহী আচার। ১০০% প্রাকৃতিক উপাদান ও পারিবারিক রেসিপি।",
   keywords: "আম, আচার, প্রাকৃতিক, হিমসাগর, আম্রপালি, বাংলাদেশ, নওগাঁ",
   authors: [{ name: "Mango Park" }],
