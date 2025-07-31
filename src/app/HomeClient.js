@@ -1,0 +1,26 @@
+'use client';
+
+import Navbar from './components/Navbar';
+import Carousel from './components/Carousel';
+import MangoCard from './components/MangoCard';
+import PickleCard from './components/PickleCard';
+import FeaturesCard from './components/FeaturesCard';
+import Footer from './components/Footer';
+import MangoFestival from './components/MangoFestival';
+import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
+import OrganicProduct from './components/OrganicProduct';
+
+export default function HomeClient() {
+  return (
+    <div className="min-h-screen bg-green-50">
+      <Navbar />
+      <Carousel />
+      <FeaturesCard />
+      <MangoCard />
+      <PickleCard />
+      <OrganicProduct />
+      <MangoFestival />
+      <Footer />
+    </div>
+  );
+}
