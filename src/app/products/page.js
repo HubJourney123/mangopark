@@ -3,6 +3,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
+import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
 import MangoCard from '../components/MangoCard';
 import PickleCard from '../components/PickleCard';
@@ -25,6 +26,7 @@ const ProductsPage = () => {
       </Head>
 
       <Navbar />
+      <Carousel />
       
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-orange-50 to-yellow-50">
         
