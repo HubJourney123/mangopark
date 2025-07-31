@@ -92,14 +92,14 @@ const Navbar = () => {
                   {isProductsOpen && (
                     <div className="bg-orange-25 border-l-2 border-orange-200 ml-4">
                       <Link 
-                        href="/products/mango" 
+                        href="/products" 
                         className="block px-6 py-3 text-base text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors duration-200"
                         onClick={closeMenu}
                       >
                         🥭 Mango
                       </Link>
                       <Link 
-                        href="/products/mango-pickles" 
+                        href="/products" 
                         className="block px-6 py-3 text-base text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-colors duration-200"
                         onClick={closeMenu}
                       >
@@ -164,10 +164,10 @@ const Navbar = () => {
               {/* Desktop Products Dropdown */}
               <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link href="/products/mango" className="block px-4 py-3 text-base text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">
+                  <Link href="/products" className="block px-4 py-3 text-base text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">
                     🥭 Mango
                   </Link>
-                  <Link href="/products/mango-pickles" className="block px-4 py-3 text-base text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">
+                  <Link href="/products" className="block px-4 py-3 text-base text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">
                     🥒 Mango Pickles
                   </Link>
                 </div>
