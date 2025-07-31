@@ -1,15 +1,5 @@
-// src/app/page.js
-'use client'
-import { useState } from 'react';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
-import MangoCard from './components/MangoCard';
-import PickleCard from './components/PickleCard';
-import FeaturesCard from './components/FeaturesCard';
-import Footer from './components/Footer';
-import MangoFestival from './components/MangoFestival';
-import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
-import OrganicProduct from './components/OrganicProduct';
+// ✅ NO "use client" here
+import HomeClient from './HomeClient';
 
 export const metadata = {
   title: "Mango Park - প্রাকৃতিক আম ও আচার | mangoparkbd.com",
@@ -37,17 +27,7 @@ export const metadata = {
   },
 };
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-green-50">
-      <Navbar />
-      <Carousel />
-      <FeaturesCard />
-      <MangoCard />
-      <PickleCard />
-      <OrganicProduct />
-      <MangoFestival />
-      <Footer />
-    </div>
-  );
+
+export default function HomePage() {
+  return <HomeClient />;
 }
